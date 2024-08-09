@@ -26,7 +26,7 @@ let person  = reactive ({
     name :'张三',
     age:18,
     car:
-    { 
+    {
       c1:'奔驰',
       c2:'宝马'
     }
@@ -34,7 +34,7 @@ let person  = reactive ({
 //方法
 function changeName()
 {
-   person.name+= "__"
+   person.name += "__"
 
 }
 

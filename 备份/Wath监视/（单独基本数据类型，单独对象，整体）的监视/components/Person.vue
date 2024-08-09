@@ -26,7 +26,7 @@ let person  = reactive ({
     name :'张三',
     age:18,
     car:
-    { 
+    {
       c1:'奔驰',
       c2:'宝马'
     }
@@ -34,7 +34,7 @@ let person  = reactive ({
 //方法
 function changeName()
 {
-   person.name+= "__"
+   person.name += "__"
 
 }
 
@@ -59,17 +59,36 @@ function changeC2 ()
 {
    person.car.c2 = '保时捷'
 }
-//监视上述的多种数据监视
-/* watch([()=> person.name,()=>person.car.c1],(newValue,oldValue)=>
+//监视
+// watch(person,(newValue,oldValue)=>
+// {
+//   console.log('person变化了',newValue,oldValue);//默认深度监视
+// })
+//任意一个值发生改变就监视到了
+
+//监视[reactive]中的某个基本数据类型时，可以写成函数式
+/* watch(()=> person.name,(newValue,oldValue)=>
 {
   console.log('person变化了',newValue,oldValue);
 })
  */
-watch(()=>person.car.c1,(newValue,oldValue)=> 
+watch(person.car,(newValue,oldValue)=> 
 {
   console.log('person.car变化了',newValue,oldValue);//函数监视person.car时
   //只是监视car的内部值 而 person.car = {c1:'雅典',c2:'路虎'} 改变了整个函数的地址
 })
+
+watch(()=> person.car,(newValue,oldValue)=> 
+{
+  console.log('person.car变化了',newValue,oldValue);//函数监视person.car时
+      //只是监视car这个对象地址有无发生改变反而没用深度监视了
+})
+
+ watch(()=> person.car,(newValue,oldValue)=> 
+{
+  console.log('person.car变化了',newValue,oldValue);//函数监视person.car时
+      
+},{deep:true}) ///这样就能即监视地址又监视内部值
 
 </script>
 <style scoped>

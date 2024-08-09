@@ -1,33 +1,39 @@
-# yukino
+# Vue 学习项目
 
-This template should help get you started developing with Vue 3 in Vite.
+这是一个使用 Vite 脚手架创建的 Vue 3 项目。这个项目作为一个学习工具，帮助你快速入门 Vue 3 和 Vite。
 
-## Recommended IDE Setup
+## 项目设置
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+要开始使用这个项目，请按照以下步骤操作：
 
-## Type Support for `.vue` Imports in TS
+### 1. 克隆仓库
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+首先，将仓库克隆到你的本地机器上：
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+```sh
+git clone https://github.com/CGTW/Vue-learing-
+cd Vue-learing-
+```
+###2. 安装依赖
+进入项目目录并安装所需的依赖：
 
 ```sh
 npm install
 ```
-
-### Compile and Hot-Reload for Development
+###3. 开发模式编译和热重载
+运行开发服务器以实时查看更改：
 
 ```sh
 npm run dev
 ```
+这将启动一个本地服务器，并在默认的网页浏览器中打开你的项目。
 
-### Type-Check, Compile and Minify for Production
+###4. 生产环境构建
+要创建项目的生产构建版本，请使用：
 
 ```sh
 npm run build
 ```
+
+推荐的 IDE 设置
+为了获得最佳的开发体验，建议使用 VSCode 并安装 Volar 插件。确保禁用其他 Vue 相关的插件（如 Vetur）以避免冲突。

@@ -1,12 +1,13 @@
 <template>
     <div class="app">
-        <Person />
+        <Person v-if="isShow"/>
     </div>
 </template>
 
 <script setup lang = "ts">
 import Person from './components/Person.vue'
-
+import {ref} from 'vue'
+let isShow = ref(true)
 </script>
 <style>
 .app

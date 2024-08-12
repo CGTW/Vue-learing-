@@ -26,6 +26,7 @@ function showLog()
     console.log(title1.value);
     
 }
+ 
 
 defineExpose({a,b,c})
 

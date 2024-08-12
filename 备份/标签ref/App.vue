@@ -2,7 +2,7 @@
     <div class="app">
         <h2 ref="title1">您好</h2>
         <button @click="showLog">点我输出这个元素</button>
-     <person ref = "ren" />
+     <person ref = "ren" /> <!-- 当你把ref放在对象上返回就是对象 ，对象上又defineExpose()可以保证对象的参数可以被看见-->
      <!-- 获取组件实例 -->
     </div>
 </template>

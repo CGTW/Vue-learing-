@@ -55,11 +55,11 @@ npm run dev
   
 
 ##  贡献
-欢迎贡献代码或提出问题！请阅读 CONTRIBUTING.md 了解更多信息。
+欢迎贡献代码或提出问题！
 
-许可证
+##  许可证
 这个项目使用 MIT 许可证。详细信息请参阅 LICENSE 文件。
 
-联系方式
+##  联系方式
 GitHub: https://github.com/CGTW/Vue-learing
 Email: 2059637505@qq.com

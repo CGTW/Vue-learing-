@@ -3,11 +3,11 @@
         <h2>Vue路由测试</h2>
         <!-- 导航区 -->
         <div class  = " navigate">   
-            <RouterLink replace to="/home" active-class="active">首页</RouterLink>
+            <RouterLink to="/home" active-class="active">首页</RouterLink>
             <!-- 命令路由 -->
-            <RouterLink replace :to="{name:'xinwen'}" active-class="active">新闻</RouterLink>
+            <RouterLink :to="{name:'xinwen'}" active-class="active">新闻</RouterLink>
             <!-- to的第二种写法 -->
-            <RouterLink replace :to="{path:'/about'}" active-class="active">关于</RouterLink>
+            <RouterLink :to="{path:'/about'}" active-class="active">关于</RouterLink>
         </div>
         <!-- 展示区 -->
          <div class = "main-content">

@@ -39,17 +39,21 @@ const router = createRouter({
             component: News,
             children: [{
                 name: 'xiang',
-                path: 'detail',//在调节餐宿为query时候应该直接写detail,使用parmas使用detai/:id/:title/:content写法
+                path: 'detail/:id/:title/:content',
                 component: Detail,
                 /* props:true */
                 //当传递的值在params里时候可以使用这个
                 // 第一种写法
                 //将路由的所有的params参数作为props传给路由组件
                 //第二种写法 函数 决定什么作为props给路由组件
-                props(route){
+                /*   props(route){
+                console.log(route )
                 return route.query
-               } 
 
+               } */
+              props:{
+                
+              }
             }]
         }
     ]

@@ -3,7 +3,6 @@
     <!-- 导航区 -->
     <ul class="new-title" style="list-style-type: none;">
       <li v-for="news in newList" :key="news.id">
-        <button @click = "showNewsDetail(news)">点击我看新闻</button>
         <RouterLink :to="
         {
             name:'xiang',  
@@ -29,7 +28,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, onBeforeUnmount, onBeforeMount } from 'vue';
 import { reactive } from 'vue';
-import { RouterView,RouterLink,useRouter} from 'vue-router';
+import { RouterView,RouterLink} from 'vue-router';
 
 const newList = reactive([
   { id: '001', title: '薯条是好东西', content: '薯条' },
@@ -48,29 +47,6 @@ onBeforeUnmount(() => {
 onUnmounted(() => {
   console.log('卸载完毕');
 });
-
-
-const router = useRouter()
-
-interface NewsInter
-{
-
-  id:string,
-  title:string,
-  content:string
-}
-function showNewsDetail(news:NewsInter) {
-
-  router.push( {
-            name:'xiang',  
-            query:
-            {
-               id:news.id,
-               title:news.title,
-               content:news.content
-            }
-        })
-}
 </script>
 
 <style scoped>
